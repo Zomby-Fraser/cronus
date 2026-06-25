@@ -3,6 +3,7 @@ Rennsport - Maxxxxed out! (Reach Account Level 80)
 
 # General Information
 As of March 2026, Rennsport single player championships award 100 xp for immediate disqualifications. 
+Script updated in June 2026 due to changes in the menus.
 This script automates the loop of:
 1. Restarting the Rookie BMW M2 championship.
 2. Skipping through practice and qualification rounds.
