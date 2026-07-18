@@ -5,7 +5,7 @@
 
 main {
     set_val(XB360_RX, -31);
-    set_val(XB360_RY, -35);
+    set_val(XB360_RY, 35);
     set_val(XB360_LY, -49);
     set_val(XB360_X, 100);
     set_val(XB360_A, 100);
