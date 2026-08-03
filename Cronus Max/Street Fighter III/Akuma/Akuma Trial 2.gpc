@@ -1,0 +1,77 @@
+// REMOVE SLASHES ON LINE 2 AND 3 FOR TITAN TWO COMPATIBILITY!
+//#include <titanone.gph>
+//#pragma METAINFO("SF3 Akuma Trial 2", 1, 0, "sTuNtAsTiC b0Ss")
+
+// Created by sTuNtAsTiC b0Ss
+
+//Instructions
+/*
+	Walk up to the other player (do not push them into the corner) and activate with LS. Stop with RS if need be.
+*/
+
+int i;
+int x=1;
+
+define lk = XB360_A;
+define mk = XB360_B;
+define hk = XB360_RT;
+
+define lp = XB360_X;
+define mp = XB360_Y;
+define hp = XB360_RB;
+
+define LY = XB360_LY;
+define LX = XB360_LX;
+
+define d = XB360_DOWN;
+define r = XB360_RIGHT;
+define l = XB360_LEFT;
+define u = XB360_UP;
+
+main 
+{
+	if(get_val(XB360_LS))
+	{
+		i = 1;
+	}
+	if(get_val(XB360_RS))
+	{
+		i = 0;
+	}
+	
+	
+	if(i==1)
+	{
+		combo_run(move1);
+	}
+}
+
+combo move1
+{
+	set(hp);
+	wait(50);
+	set(d);
+	wait(100);
+	set(d);
+	set(l);
+	wait(100);
+	set(l);
+	set(lk);
+	wait(725);
+	set(lp);
+	wait(10);
+	set(d);
+	wait(75);
+	set(d);
+	set(l);
+	wait(75);
+	set(l);
+	set(hk);
+	wait(75);
+	i = 0;
+}
+
+function set(button)
+{
+	set_val(button, 100);
+}
