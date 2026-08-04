@@ -1,0 +1,72 @@
+// REMOVE SLASHES ON LINE 2 AND 3 FOR TITAN TWO COMPATIBILITY!
+//#include <titanone.gph>
+//#pragma METAINFO("BBCS Hazama Mission 01", 1, 0, "sTuNtAsTiC b0Ss")
+
+// Created by sTuNtAsTiC b0Ss
+
+//Instructions
+/*
+	Walk up to the other player and activate with LS. Stop with RS if need be.
+*/
+
+int i;
+int x=1;
+
+// BlazBlue attack buttons (assumed BBCS defaults)
+define A = XB360_X;    // weak
+define B = XB360_Y;    // medium
+define C = XB360_B;    // strong
+define D = XB360_A;    // drive
+
+// directions (down renamed d -> dn to avoid clashing with D)
+define u  = XB360_UP;
+define dn = XB360_DOWN;
+define l  = XB360_LEFT;
+define r  = XB360_RIGHT;
+
+define LY = XB360_LY;
+define LX = XB360_LX;
+
+main 
+{
+	if(get_val(XB360_LS))
+	{
+		i = 1;
+	}
+	if(get_val(XB360_RS))
+	{
+		i = 0;
+	}
+	
+	
+	if(i==1)
+	{
+		combo_run(move1);
+	}
+	if(i==0)
+	{
+		combo_stop(move1);
+	}
+}
+
+combo move1
+{
+	//Serpent's Benediction (214D)
+	set(dn);
+	wait(50);
+	set(dn);
+	set(l);
+	wait(50);
+	set(l);
+	set(D);
+	wait(300);          // stance wait: past 6F floor, near 25F (S) upgrade
+	//Falling Fang (A during stance)
+	set(C);
+	wait(100);
+	i = 0;
+}
+
+function set(button)
+{
+	set_val(button, 100);
+}
