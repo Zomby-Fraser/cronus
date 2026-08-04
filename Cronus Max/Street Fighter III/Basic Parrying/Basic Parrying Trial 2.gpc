@@ -1,0 +1,47 @@
+// REMOVE SLASHES ON LINE 2 AND 3 FOR TITAN TWO COMPATIBILITY!
+#include <titanone.gph>
+#pragma METAINFO("SF3 Parrying Trial 1", 1, 0, "sTuNtAsTiC b0sS")
+
+// Created by sTuNtAsTiC b0sS
+
+//Instructions
+/*
+	Activate with LS right when the fireball is about to hit you. Stop with RS if need be.
+*/
+
+int i;
+
+main 
+{
+	if(get_val(XB360_LS))
+	{
+		i = 1;
+	}
+	if(get_val(XB360_RS))
+	{
+		i = 0;
+	}
+	
+	
+	if(i==1)
+	{
+		combo_run(move1);
+	}
+	
+	if(i == 0)
+	{
+		combo_stop(move1);
+	}
+}
+
+combo move1
+{
+    set_val(PS4_RIGHT, 100);
+    wait(90);
+    set_val(PS4_RIGHT, 0);
+    wait(180);
+    set_val(PS4_RIGHT, 100);
+    wait(80);
+    set_val(PS4_RIGHT, 0);
+	i = 0;
+}

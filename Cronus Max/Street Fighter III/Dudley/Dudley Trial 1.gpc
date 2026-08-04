@@ -1,0 +1,69 @@
+// REMOVE SLASHES ON LINE 2 AND 3 FOR TITAN TWO COMPATIBILITY!
+#include <titanone.gph>
+#pragma METAINFO("SF3 Dudley Trial 1", 1, 0, "sTuNtAsTiC b0sS")
+
+// Created by sTuNtAsTiC b0sS
+
+//Instructions
+/*
+	Pause and reset then activate with LS. It may take a few tries. Stop with RS if need be.
+*/
+
+int i;
+
+main 
+{
+	if(get_val(XB360_LS))
+	{
+		i = 1;
+	}
+	if(get_val(XB360_RS))
+	{
+		i = 0;
+	}
+	
+	
+	if(i==1)
+	{
+		combo_run(move1);
+	}
+	
+	if(i == 0)
+	{
+		combo_stop(move1);
+	}
+}
+
+combo move1
+{
+    set_val(PS4_RIGHT, 100);
+    wait(580);
+    set_val(PS4_RIGHT, 0);
+    wait(1970);
+    set_val(PS4_R2, 100);
+    wait(60);
+    set_val(PS4_R2, 0);
+    wait(30);
+    set_val(PS4_RIGHT, 100);
+    wait(70);
+    set_val(PS4_DOWN, 100);
+    set_val(PS4_RIGHT, 100);
+    wait(10);
+    set_val(PS4_DOWN, 100);
+    set_val(PS4_RIGHT, 0);
+    wait(70);
+    set_val(PS4_DOWN, 100);
+    set_val(PS4_RIGHT, 100);
+    wait(20);
+    set_val(PS4_DOWN, 0);
+    set_val(PS4_RIGHT, 100);
+    wait(10);
+    set_val(PS4_R1, 100);
+    set_val(PS4_RIGHT, 100);
+    wait(60);
+    set_val(PS4_R1, 100);
+    set_val(PS4_RIGHT, 0);
+    wait(10);
+    set_val(PS4_R1, 0);
+	i = 0;
+}

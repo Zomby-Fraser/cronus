@@ -1,0 +1,76 @@
+// REMOVE SLASHES ON LINE 2 AND 3 FOR TITAN TWO COMPATIBILITY!
+#include <titanone.gph>
+#pragma METAINFO("SF3 Oro Trial 2", 1, 0, "sTuNtAsTiC b0sS")
+
+// Created by sTuNtAsTiC b0sS
+
+//Instructions
+/*
+	Press start, reset, then click LS. RS to stop. 
+*/
+
+int i;
+
+main 
+{
+	if(get_val(XB360_LS))
+	{
+		i = 1;
+	}
+	if(get_val(XB360_RS))
+	{
+		i = 0;
+	}
+	
+	
+	if(i==1)
+	{
+		combo_run(move1);
+	}
+	if(i==0)
+	{
+		combo_stop(move1);
+	}
+}
+
+combo move1
+{
+	wait(330);
+	set_val(PS4_DOWN, 100);
+	wait(90);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_CROSS, 100);
+	wait(50);
+	set_val(PS4_DOWN, 0);
+	set_val(PS4_CROSS, 100);
+	wait(50);
+	set_val(PS4_CROSS, 0);
+	wait(760);
+	set_val(PS4_RIGHT, 100);
+	wait(50);
+	set_val(PS4_UP, 100);
+	set_val(PS4_RIGHT, 100);
+	wait(200);
+	set_val(PS4_UP, 100);
+	set_val(PS4_RIGHT, 0);
+	wait(20);
+	set_val(PS4_UP, 0);
+	wait(350);
+	set_val(PS4_R2, 100);
+	wait(140);
+	set_val(PS4_R2, 0);
+	wait(200);
+	set_val(PS4_TRIANGLE, 100);
+	wait(70);
+	set_val(PS4_TRIANGLE, 0);
+	wait(180);
+	set_val(PS4_R2, 100);
+	wait(50);
+	set_val(PS4_R2, 0);
+	wait(650);
+	set_val(PS4_R2, 100);
+	wait(70);
+	set_val(PS4_R2, 0);
+	i = 0;
+}
+
