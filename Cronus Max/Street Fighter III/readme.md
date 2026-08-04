@@ -17,8 +17,7 @@ Only 1 trial needs to be done manually and that is the first Handicap Trials. Us
 - The correct starting position for each trial is described in the script comments. Make sure Player 1 is positioned exactly as noted before beginning, or the inputs may not line up correctly.
 
 ### Starting the Script
-1. All scripts **start with LS (left stick)** and **end with RS (right stick)**.
-2. Press LS to begin execution and let the script run.
+All scripts **start with LS (left stick)** and **end with RS (right stick)**.
 
 ## Script Behavior
 - The script will select the default trial choices, execute the required combo inputs, and then complete the trial sequence.
