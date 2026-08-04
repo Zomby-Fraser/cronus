@@ -8,12 +8,6 @@ A majority of these scripts have been recorded by **sTuNtAsTiC b0sS** and put in
 Only 1 trial needs to be done manually and that is the first Handicap Trials. Using all of these scripts will give you 54/55 trials needed for the trophy.
 
 ## Setup Instructions
-
-### Player 1 Setup (Person Completing the Trials)
-1. From the main menu, navigate to `Trials > Select Character > Select Trial`.
-2. Highlight the starting trial you wish to run.
-
-### Starting Position
 - The correct starting position for each trial is described in the script comments. Make sure Player 1 is positioned exactly as noted before beginning, or the inputs may not line up correctly.
 
 ### Starting the Script
