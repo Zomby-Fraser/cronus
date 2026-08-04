@@ -1,0 +1,75 @@
+// REMOVE SLASHES ON LINE 2 AND 3 FOR TITAN TWO COMPATIBILITY!
+//#include <titanone.gph>
+//#pragma METAINFO("BBCS Hazama M1 C1", 1, 0, "sTuNtAsTiC b0Ss")
+
+// Created by sTuNtAsTiC b0Ss
+
+//Instructions
+/*
+	Activate with LS from the starting position. Stop with RS if need be.
+	Script walks forward 1s first, then performs the combo.
+*/
+
+int i;
+int x=1;
+
+// BlazBlue attack buttons (BBCS defaults, confirmed)
+define A = XB360_X;    // weak
+define B = XB360_Y;    // medium
+define C = XB360_B;    // strong
+define D = XB360_A;    // drive
+
+// directions (down renamed d -> dn to avoid clashing with D)
+define u  = XB360_UP;
+define dn = XB360_DOWN;
+define l  = XB360_LEFT;
+define r  = XB360_RIGHT;
+
+define LY = XB360_LY;
+define LX = XB360_LX;
+
+main 
+{
+	if(get_val(XB360_LS))
+	{
+		i = 1;
+	}
+	if(get_val(XB360_RS))
+	{
+		i = 0;
+	}
+	
+	
+	if(i==1)
+	{
+		combo_run(move1);
+	}
+	if(i==0)
+	{
+		combo_stop(move1);
+	}
+}
+
+combo move1
+{
+	//Walk forward from starting position
+	set(r);
+	wait(1000);
+	//neutral gap so the walk-forward doesn't bleed into the qcf motion
+	wait(50);
+	//Venom Sword (236D)
+	set(dn);
+	wait(50);
+	set(dn);
+	set(r);
+	wait(50);
+	set(r);
+	set(D);
+	wait(50);
+	i = 0;
+}
+
+function set(button)
+{
+	set_val(button, 100);
+}
