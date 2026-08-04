@@ -1,0 +1,129 @@
+// REMOVE SLASHES ON LINE 2 AND 3 FOR TITAN TWO COMPATIBILITY!
+//#include <titanone.gph>
+//#pragma METAINFO("BBCS Hazama M3 C1", 1, 0, "sTuNtAsTiC b0Ss")
+
+// Created by sTuNtAsTiC b0Ss
+
+//Instructions
+/*
+	Activate with LS from the starting position. Stop with RS if need be.
+	Full juggle: 5B > 3C > 214D~C > 5C > j.C x5 > dj.C x5 > j.214B
+	Many air-timing values are estimates - see notes. Tune against the demonstration.
+*/
+
+int i;
+int x=1;
+
+// BlazBlue attack buttons (BBCS defaults, confirmed)
+define A = XB360_X;    // weak
+define B = XB360_Y;    // medium
+define C = XB360_B;    // strong
+define D = XB360_A;    // drive
+
+// directions (down renamed d -> dn to avoid clashing with D)
+define u  = XB360_UP;
+define dn = XB360_DOWN;
+define l  = XB360_LEFT;
+define r  = XB360_RIGHT;
+
+define LY = XB360_LY;
+define LX = XB360_LX;
+
+main 
+{
+	if(get_val(XB360_LS))
+	{
+		i = 1;
+	}
+	if(get_val(XB360_RS))
+	{
+		i = 0;
+	}
+	
+	
+	if(i==1)
+	{
+		combo_run(move1);
+	}
+	if(i==0)
+	{
+		combo_stop(move1);
+	}
+}
+
+combo move1
+{
+	//5B
+	set(B);
+	wait(150);
+	//3C
+	set(dn);
+	set(C);
+	wait(200);
+	//214D - Serpent's Benediction
+	set(dn);
+	wait(50);
+	set(dn);
+	set(l);
+	wait(50);
+	set(l);
+	wait(50);
+	set(D);
+	wait(150);
+	//C during stance - Devouring Fang
+	set(C);
+	wait(660);
+	//5C (LINK - first test point)
+	set(C);
+	wait(170);
+	//jump (9 = up-forward)
+	set(u);
+	set(r);
+	wait(100);
+	//j.C x5 (first air string)
+	set(C);
+	wait(130);
+	set(C);
+	wait(130);
+	set(C);
+	wait(130);
+	set(C);
+	wait(130);
+	set(C);
+	wait(150);
+	//double jump (9)
+	set(u);
+	set(r);
+	wait(100);
+	//j.C x5 (second air string)
+	set(C);
+	wait(130);
+	set(C);
+	wait(130);
+	set(C);
+	wait(130);
+	set(C);
+	wait(130);
+	set(C);
+	wait(150);
+	//j.214B - Wind Serpent's Fang (ENDER)
+	set(dn);
+	wait(50);
+	set(dn);
+	set(l);
+	wait(50);
+	set(l);
+	set(B);
+	wait(50);
+	i = 0;
+}
+
+function set(button)
+{
+	set_val(button, 100);
+}
+
+function rel(button)
+{
+	set_val(button, 0);
+}
