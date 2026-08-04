@@ -20,8 +20,4 @@ Only 1 trial needs to be done manually and that is the first Handicap Trials. Us
 All scripts **start with LS (left stick)** and **end with RS (right stick)**.
 
 ## Script Behavior
-- The script will select the default trial choices, execute the required combo inputs, and then complete the trial sequence.
-- To ensure the script doesn't get lost in the menus and that progress is recorded correctly, the script will back out to the appropriate menu and re-enter the correct setup position.
-- This script is primarily meant for grinding trials but can also be used toward related achievements. Note that it will not change characters for you (this feature may be added in a future version).
-- Because a majority of these scripts were recorded from **actual gameplay**, some may appear to make mistakes or misfire inputs during execution. Despite this, they all do work. Let the entire script play out from start to finish, and be aware that it may need to be run several times before it completes successfully.
-- Be mindful that not every trial or character combination has been tested. Since each character has different combo timings and input requirements, it is recommended to keep an eye on the script's progress, although it is designed to work with the recorded trials.
+- Because a majority of these scripts were recorded from **actual gameplay**, some may appear to make mistakes or misfire inputs during execution. Despite this, they all do work. Let the entire script play out from start to finish and be aware that it may need to be run several times before it completes successfully. If a retry is needed, just pause and hit reset and reposition.
