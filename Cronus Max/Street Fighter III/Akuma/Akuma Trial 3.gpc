@@ -1,0 +1,233 @@
+// REMOVE SLASHES ON LINE 2 AND 3 FOR TITAN TWO COMPATIBILITY!
+#include <titanone.gph>
+#pragma METAINFO("SF3 Akuma Trial 3", 1, 0, "sTuNtAsTiC b0sS")
+
+// Created by sTuNtAsTiC b0sS
+
+//Instructions
+/*
+	Push the oponent all the way to the right, back up a bit and jump up and right. Activate slightly after you jump with LS. May take a few tries. Stop with RS.
+*/
+
+int i;
+
+main 
+{
+	if(get_val(XB360_LS))
+	{
+		i = 1;
+	}
+	if(get_val(XB360_RS))
+	{
+		i = 0;
+	}
+	
+	
+	if(i==1)
+	{
+		combo_run(move1);
+	}
+	if(i==0)
+	{
+		combo_stop(move1);
+	}
+}
+
+combo move1
+{
+		set_val(PS4_DOWN, 100);
+	wait(160);
+	set_val(PS4_R1, 100);
+	set_val(PS4_DOWN, 100);
+	wait(50);
+	set_val(PS4_R1, 0);
+	set_val(PS4_DOWN, 100);
+	wait(140);
+	set_val(PS4_R1, 100);
+	set_val(PS4_DOWN, 100);
+	wait(50);
+	set_val(PS4_R1, 0);
+	set_val(PS4_DOWN, 100);
+	wait(90);
+	set_val(PS4_R1, 100);
+	set_val(PS4_DOWN, 100);
+	wait(40);
+	set_val(PS4_R1, 100);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_RIGHT, 100);
+	wait(20);
+	set_val(PS4_R1, 0);
+	set_val(PS4_DOWN, 0);
+	set_val(PS4_RIGHT, 100);
+	wait(60);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_RIGHT, 100);
+	wait(10);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_RIGHT, 0);
+	wait(30);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_LEFT, 100);
+	wait(40);
+	set_val(PS4_DOWN, 0);
+	set_val(PS4_LEFT, 100);
+	wait(30);
+	set_val(PS4_UP, 100);
+	set_val(PS4_LEFT, 100);
+	set_val(PS4_CROSS, 100);
+	wait(50);
+	set_val(PS4_UP, 100);
+	set_val(PS4_LEFT, 100);
+	set_val(PS4_CROSS, 0);
+	wait(10);
+	set_val(PS4_UP, 0);
+	set_val(PS4_LEFT, 0);
+	wait(450);
+	set_val(PS4_DOWN, 100);
+	wait(50);
+	set_val(PS4_DOWN, 0);
+	set_val(PS4_RIGHT, 100);
+	wait(130);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_RIGHT, 100);
+	wait(20);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_RIGHT, 0);
+	wait(60);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_RIGHT, 100);
+	wait(30);
+	set_val(PS4_DOWN, 0);
+	set_val(PS4_RIGHT, 100);
+	wait(10);
+	set_val(PS4_R1, 100);
+	set_val(PS4_RIGHT, 100);
+	wait(50);
+	set_val(PS4_R1, 0);
+	set_val(PS4_RIGHT, 100);
+	wait(20);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_RIGHT, 100);
+	wait(20);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_RIGHT, 0);
+	wait(40);
+	set_val(PS4_R1, 100);
+	set_val(PS4_DOWN, 100);
+	wait(20);
+	set_val(PS4_R1, 100);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_RIGHT, 100);
+	wait(20);
+	set_val(PS4_R1, 0);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_RIGHT, 100);
+	wait(40);
+	set_val(PS4_DOWN, 0);
+	set_val(PS4_RIGHT, 100);
+	wait(30);
+	set_val(PS4_R1, 100);
+	set_val(PS4_RIGHT, 100);
+	wait(10);
+	set_val(PS4_R1, 100);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_RIGHT, 100);
+	wait(40);
+	set_val(PS4_R1, 0);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_RIGHT, 100);
+	wait(10);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_RIGHT, 0);
+	wait(30);
+	set_val(PS4_DOWN, 0);
+	wait(40);
+	set_val(PS4_R1, 100);
+	wait(50);
+	set_val(PS4_R1, 0);
+	wait(1340);
+	set_val(PS4_RIGHT, 100);
+	wait(140);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_RIGHT, 100);
+	wait(10);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_RIGHT, 0);
+	wait(90);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_RIGHT, 100);
+	wait(20);
+	set_val(PS4_R1, 100);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_RIGHT, 100);
+	wait(20);
+	set_val(PS4_R1, 100);
+	set_val(PS4_DOWN, 0);
+	set_val(PS4_RIGHT, 100);
+	wait(40);
+	set_val(PS4_R1, 0);
+	set_val(PS4_RIGHT, 100);
+	wait(40);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_RIGHT, 100);
+	wait(20);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_RIGHT, 0);
+	wait(10);
+	set_val(PS4_R1, 100);
+	set_val(PS4_DOWN, 100);
+	wait(40);
+	set_val(PS4_R1, 0);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_RIGHT, 100);
+	wait(30);
+	set_val(PS4_DOWN, 0);
+	set_val(PS4_RIGHT, 100);
+	wait(40);
+	set_val(PS4_R1, 100);
+	set_val(PS4_RIGHT, 100);
+	wait(50);
+	set_val(PS4_R1, 0);
+	set_val(PS4_RIGHT, 100);
+	wait(20);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_RIGHT, 100);
+	wait(40);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_RIGHT, 0);
+	wait(10);
+	set_val(PS4_R1, 100);
+	set_val(PS4_DOWN, 0);
+	wait(90);
+	set_val(PS4_R1, 0);
+	wait(1370);
+	set_val(PS4_RIGHT, 100);
+	wait(100);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_RIGHT, 100);
+	wait(20);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_RIGHT, 0);
+	wait(70);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_RIGHT, 100);
+	wait(30);
+	set_val(PS4_R1, 100);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_RIGHT, 100);
+	wait(40);
+	set_val(PS4_R1, 0);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_RIGHT, 100);
+	wait(20);
+	set_val(PS4_DOWN, 0);
+	set_val(PS4_RIGHT, 100);
+	wait(10);
+	set_val(PS4_RIGHT, 0);
+	wait(30);
+	set_val(PS4_R1, 100);
+	wait(50);
+	set_val(PS4_R1, 0);
+	i = 0;
+}
+
