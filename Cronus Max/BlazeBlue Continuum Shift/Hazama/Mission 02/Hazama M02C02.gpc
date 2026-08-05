@@ -53,23 +53,19 @@ main
 
 combo move1
 {
-	//Walk forward from starting position
-	set(r);
-	wait(1000);
-	wait(50);
 	//Eternal Coils of the Dragon Serpent (632146C super)
 	set(r);              // 6
-	wait(50);
+	wait(60);
 	set(dn);
 	set(r);              // 3 (down-forward)
-	wait(50);
+	wait(60);
 	set(dn);             // 2
-	wait(50);
+	wait(60);
 	set(dn);
 	set(l);              // 1 (down-back)
-	wait(50);
+	wait(60);
 	set(l);              // 4
-	wait(50);
+	wait(60);
 	set(r);              // 6 (forward again)
 	set(C);
 	wait(50);
