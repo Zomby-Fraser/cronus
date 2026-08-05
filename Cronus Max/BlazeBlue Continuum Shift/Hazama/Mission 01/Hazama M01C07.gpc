@@ -55,16 +55,16 @@ combo move1
 	//Walk forward from starting position
 	set(r);
 	wait(1000);
-	wait(50);
+	wait(60);
 	//Jump straight up  (prejump = 4F/~67ms, airtime = 39F/~650ms)
 	set(u);
 	wait(200);          // ~12F after up: airborne & rising, ~450ms airtime left
 	//Wind Serpent's Fang ([Midair] 214B)
 	set(dn);
-	wait(50);
+	wait(60);
 	set(dn);
 	set(l);
-	wait(50);
+	wait(60);
 	set(l);
 	set(B);
 	wait(50);
