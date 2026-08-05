@@ -60,18 +60,18 @@ combo move1
 	//Serpent's Infernal Rapture (236236B super)
 	//first qcf
 	set(dn);
-	wait(50);
+	wait(60);
 	set(dn);
 	set(r);
-	wait(50);
+	wait(60);
 	set(r);
-	wait(50);
+	wait(60);
 	//second qcf
 	set(dn);
-	wait(50);
+	wait(60);
 	set(dn);
 	set(r);
-	wait(50);
+	wait(60);
 	set(r);
 	set(B);
 	wait(50);
