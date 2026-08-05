@@ -1,0 +1,71 @@
+//#include <titanone.gph>
+//#pragma METAINFO("Set 2 Slot 2", 1, 0, "XxFrAsZeRxX")
+
+int i; //declares variable
+main
+{
+	if(get_val(XB360_LS))//When LS is pressed, i=1
+	{
+		i=1;
+	}
+	if(get_val(XB360_RS)) //When Xbox button is pressed, i=0;
+	{
+		i=0;
+	}
+	if(i==1) //For *OPTION 1*
+	{	
+		combo_run(Host);
+	}
+	if(i==0) //Stops all macros
+	{
+		combo_stop(Host);
+	}
+}
+
+combo Host //Macro for Host
+{
+ set_val(PS4_DOWN, 100);
+	wait(100);
+	set_val(PS4_DOWN, 100);
+	set_val(PS4_RIGHT, 100);
+	wait(30);
+	set_val(PS4_DOWN, 0);
+	set_val(PS4_RIGHT, 100);
+	wait(40);
+	set_val(PS4_RIGHT, 100);
+	set_val(PS4_SQUARE, 100);
+	wait(20);
+	set_val(PS4_RIGHT, 0);
+	set_val(PS4_SQUARE, 100);
+	wait(40);
+	set_val(PS4_SQUARE, 0);
+	wait(2690);
+	set_val(PS4_OPTIONS, 100);
+	wait(160);
+	set_val(PS4_OPTIONS, 0);
+	wait(420);
+	set_val(PS4_CROSS, 100);
+	wait(120);
+	set_val(PS4_CROSS, 0);
+	wait(310);
+	set_val(PS4_UP, 100);
+	wait(120);
+	set_val(PS4_UP, 0);
+	wait(150);
+	set_val(PS4_UP, 100);
+	wait(90);
+	set_val(PS4_UP, 0);
+	wait(110);
+	set_val(PS4_CROSS, 100);
+	wait(120);
+	set_val(PS4_CROSS, 0);
+	wait(830);
+	set_val(PS4_CROSS, 100);
+	wait(10);
+	set_val(PS4_CIRCLE, 100);
+	set_val(PS4_CROSS, 100);
+	wait(80);
+	set_val(PS4_CIRCLE, 0);
+	set_val(PS4_CROSS, 0);
+	i = 0;
+}
