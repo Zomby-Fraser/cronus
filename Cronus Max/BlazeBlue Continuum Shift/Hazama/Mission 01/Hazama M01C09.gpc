@@ -1,6 +1,6 @@
 // REMOVE SLASHES ON LINE 2 AND 3 FOR TITAN TWO COMPATIBILITY!
-//#include <titanone.gph>
-//#pragma METAINFO("BBCS Hazama M1 HungryCoils", 1, 0, "sTuNtAsTiC b0Ss")
+#include <titanone.gph>
+#pragma METAINFO("BBCS Hazama M1 HungryCoils", 1, 0, "sTuNtAsTiC b0Ss")
 
 // Created by sTuNtAsTiC b0Ss
 
@@ -52,15 +52,11 @@ main
 
 combo move1
 {
-	//Walk forward from starting position
-	set(r);
-	wait(1000);
-	wait(50);
 	//Hungry Coils (623D - dragon punch motion + Drive)
 	set(r);
-	wait(50);
+	wait(80);
 	set(dn);
-	wait(50);
+	wait(80);
 	set(dn);
 	set(r);
 	set(D);
