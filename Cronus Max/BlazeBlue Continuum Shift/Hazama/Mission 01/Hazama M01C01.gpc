@@ -56,16 +56,16 @@ combo move1
 	set(r);
 	wait(1000);
 	//neutral gap so the walk-forward doesn't bleed into the qcf motion
-	wait(50);
+	wait(60);
 	//Venom Sword (236D)
 	set(dn);
-	wait(50);
+	wait(60);
 	set(dn);
 	set(r);
-	wait(50);
+	wait(60);
 	set(r);
 	set(D);
-	wait(50);
+	wait(60);
 	i = 0;
 }
 
