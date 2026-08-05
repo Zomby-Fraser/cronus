@@ -55,10 +55,10 @@ combo move1
 	wait(1000);
 	//Serpent's Benediction (214D)
 	set(dn);
-	wait(50);
+	wait(60);
 	set(dn);
 	set(l);
-	wait(50);
+	wait(60);
 	set(l);
 	set(D);
 	wait(150);          // stance wait: past 6F floor, near 25F (S) upgrade
