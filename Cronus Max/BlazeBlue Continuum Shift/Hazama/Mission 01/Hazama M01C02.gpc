@@ -59,10 +59,10 @@ combo move1
 	wait(50);
 	//Venom Sword (236D)
 	set(dn);
-	wait(50);
+	wait(60);
 	set(dn);
 	set(l);
-	wait(50);
+	wait(60);
 	set(l);
 	set(D);
 	wait(50);
