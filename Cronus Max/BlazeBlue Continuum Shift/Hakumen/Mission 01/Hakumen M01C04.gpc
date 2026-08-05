@@ -1,0 +1,58 @@
+// REMOVE SLASHES ON LINE 2 AND 3 FOR TITAN TWO COMPATIBILITY!
+//#include <titanone.gph>
+//#pragma METAINFO("BBCS Hakumen M1 C4", 1, 0, "XxFrAsZeRxX")
+
+// Created by XxFrAsZeRxX
+
+int i;
+
+define A = XB360_X;
+define B = XB360_Y;
+define C = XB360_B;
+define D = XB360_A;
+define u  = XB360_UP;
+define dn = XB360_DOWN;
+define l  = XB360_LEFT;
+define r  = XB360_RIGHT;
+
+main
+{
+	if(get_val(XB360_LS)) { i = 1; }
+	if(get_val(XB360_RS)) { i = 0; }
+	if(i==1) { combo_run(move1); }
+	if(i==0) { combo_stop(move1); }
+}
+
+combo move1
+{
+	// walk in
+	set(r);
+	wait(1000);
+
+	// 623 + A  (Kishuu - hop/stance)
+	set(r);
+	wait(60);
+	set(dn);
+	wait(60);
+	set(dn);
+	set(r);
+	wait(60);
+	set(r);
+	set(A);
+	wait(60);
+
+	// wait into the 12-16F Enma cancel window (~200-267ms), then A
+	wait(170);       // ~60ms tap above + 170 -> lands the follow-up mid-window
+
+	// A  (Enma - Kishuu follow-up)
+	set(A);
+	wait(60);
+	wait(150);       // let Enma connect
+
+	i = 0;
+}
+
+function set(button)
+{
+	set_val(button, 100);
+}
