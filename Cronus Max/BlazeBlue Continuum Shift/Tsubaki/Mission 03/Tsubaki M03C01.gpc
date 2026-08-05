@@ -1,0 +1,104 @@
+// REMOVE SLASHES ON LINE 2 AND 3 FOR TITAN TWO COMPATIBILITY!
+//#include <titanone.gph>
+//#pragma METAINFO("BBCS Tsubaki M3 C1", 1, 0, "XxFrAsZeRxX")
+
+// Created by XxFrAsZeRxX
+
+int i;
+
+define A = XB360_X;
+define B = XB360_Y;
+define C = XB360_B;
+define D = XB360_A;
+define u  = XB360_UP;
+define dn = XB360_DOWN;
+define l  = XB360_LEFT;
+define r  = XB360_RIGHT;
+
+main
+{
+	if(get_val(XB360_LS)) { i = 1; }
+	if(get_val(XB360_RS)) { i = 0; }
+	if(i==1) { combo_run(move1); }
+	if(i==0) { combo_stop(move1); }
+}
+
+combo move1
+{
+	// walk in
+	set(r);
+	wait(1000);
+
+	// 5B  (follow-up window 14-19F)
+	set(B);
+	wait(60);
+	wait(200);
+
+	// 5B>B
+	set(B);
+	wait(60);
+	wait(220);
+
+	// 2B  (down+B; follow-up window 16-21F)
+	set(dn);
+	set(B);
+	wait(60);
+	set(dn);
+	wait(220);
+
+	// 2B>B  (hold down, tap B again)
+	set(dn);
+	set(B);
+	wait(60);
+	set(dn);
+	wait(200);
+
+	// 5C  (release down -> neutral; follow-up window 16-26F)
+	set(C);
+	wait(60);
+	wait(220);
+
+	// 5C>C  (Sp cancel available)
+	set(C);
+	wait(60);
+	wait(220);
+
+	// 236 + A  (special-cancel out of 5C>C)
+	set(dn);
+	wait(60);
+	set(dn);
+	set(r);
+	wait(60);
+	set(r);
+	set(A);
+	wait(60);
+	wait(150);
+
+	// 214 + A  (special -> special)
+	set(dn);
+	wait(60);
+	set(dn);
+	set(l);
+	wait(60);
+	set(l);
+	set(A);
+	wait(60);
+	wait(150);
+
+	// 22 + A  (delayable charge; down, neutral, down, tap+release)
+	set(dn);
+	wait(60);
+	wait(60);
+	set(dn);
+	wait(60);
+	set(A);
+	wait(120);
+	wait(300);
+
+	i = 0;
+}
+
+function set(button)
+{
+	set_val(button, 100);
+}
