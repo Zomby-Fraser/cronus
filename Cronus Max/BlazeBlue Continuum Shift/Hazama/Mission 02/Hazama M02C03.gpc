@@ -61,19 +61,19 @@ combo move1
 	//Hungry Darkness of 1000 Souls (Astral - 1632143D)
 	set(dn);
 	set(l);              // 1 (down-back)
-	wait(50);
+	wait(60);
 	set(r);              // 6 (forward)
-	wait(50);
+	wait(60);
 	set(dn);
 	set(r);              // 3 (down-forward)
-	wait(50);
+	wait(60);
 	set(dn);             // 2 (down)
-	wait(50);
+	wait(60);
 	set(dn);
 	set(l);              // 1 (down-back)
-	wait(50);
+	wait(60);
 	set(l);              // 4 (back)
-	wait(50);
+	wait(60);
 	set(dn);
 	set(r);              // 3 (down-forward)
 	set(D);
