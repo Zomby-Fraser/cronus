@@ -51,15 +51,17 @@ main
 
 combo move1
 {
+	set(r);
+	wait(1000);
 	//Serpent's Benediction (214D)
 	set(dn);
-	wait(50);
+	wait(60);
 	set(dn);
 	set(l);
-	wait(50);
+	wait(60);
 	set(l);
 	set(D);
-	wait(300);          // stance wait: past 6F floor, near 25F (S) upgrade
+	wait(150);          // stance wait: past 6F floor, near 25F (S) upgrade
 	//Falling Fang (A during stance)
 	set(D);
 	wait(100);
