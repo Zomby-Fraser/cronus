@@ -1,0 +1,56 @@
+// REMOVE SLASHES ON LINE 2 AND 3 FOR TITAN TWO COMPATIBILITY!
+//#include <titanone.gph>
+//#pragma METAINFO("BBCS Tsubaki M1 C6", 1, 0, "XxFrAsZeRxX")
+
+// Created by XxFrAsZeRxX
+
+int i;
+
+define A = XB360_X;
+define B = XB360_Y;
+define C = XB360_B;
+define D = XB360_A;
+define u  = XB360_UP;
+define dn = XB360_DOWN;
+define l  = XB360_LEFT;
+define r  = XB360_RIGHT;
+
+main
+{
+	if(get_val(XB360_LS)) { i = 1; }
+	if(get_val(XB360_RS)) { i = 0; }
+	if(i==1) { combo_run(move1); }
+	if(i==0) { combo_stop(move1); }
+}
+
+combo move1
+{
+	// walk in
+	set(r);
+	wait(1000);
+
+	// neutral jump
+	set(u);
+	wait(60);      // register jump input
+	wait(180);     // clear prejump + gain a little height (dive needs airtime to angle down)
+
+	// air 214 + A  (A Lux Aeterna)
+	set(dn);
+	wait(60);
+	set(dn);
+	set(l);
+	wait(60);
+	set(l);
+	set(A);
+	wait(60);
+
+	// active til land + slide -> give it room to dive, connect, and recover
+	wait(400);
+
+	i = 0;
+}
+
+function set(button)
+{
+	set_val(button, 100);
+}
