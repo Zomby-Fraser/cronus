@@ -1,6 +1,6 @@
 // REMOVE SLASHES ON LINE 2 AND 3 FOR TITAN TWO COMPATIBILITY!
-//#include <titanone.gph>
-//#pragma METAINFO("BBCS Hakumen M1 C5", 1, 0, "XxFrAsZeRxX")
+#include <titanone.gph>
+#pragma METAINFO("BBCS Hakumen M1 C1", 1, 0, "XxFrAsZeRxX")
 
 // Created by XxFrAsZeRxX
 
@@ -29,7 +29,7 @@ combo move1
 	set(u);
 	set(r);
 	wait(60);        // register jump-forward input
-	wait(100);       // clear prejump + 1st airborne frame -> air-move floor
+	wait(500);       // clear prejump + 1st airborne frame -> air-move floor
 
 	// air 214 + B  (Hotaru)
 	set(dn);
