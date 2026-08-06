@@ -28,12 +28,13 @@ combo move1
 	// walk in
 	set(r);
 	wait(1000);
+	wait(100);
 
 	// B + C  (simultaneous press, starter)
 	set(B);
 	set(C);
 	wait(60);
-	wait(250);       // let the starter connect before the special
+	wait(750);       // let the starter connect before the special
 
 	// 214 + A  (Gurren)
 	set(dn);
@@ -44,7 +45,7 @@ combo move1
 	set(l);
 	set(A);
 	wait(60);
-	wait(200);       // Gurren connects / wall-bounce before 6C
+	wait(1100);       // Gurren connects / wall-bounce before 6C
 
 	// 6C  (forward + C)
 	set(r);
