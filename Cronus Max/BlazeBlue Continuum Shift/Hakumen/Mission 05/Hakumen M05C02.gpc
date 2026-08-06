@@ -1,0 +1,133 @@
+// REMOVE SLASHES ON LINE 2 AND 3 FOR TITAN TWO COMPATIBILITY!
+#include <titanone.gph>
+#pragma METAINFO("BBCS Hakumen M4 C2", 1, 0, "XxFrAsZeRxX")
+
+// Created by XxFrAsZeRxX
+
+//Instructions
+/*
+	Activate with LS from the starting position. Stop with RS if need be.
+	Full combo: 2D > 66 > 5B > j.1 > j.A > j.B > dj.1 > j.2A > j.C
+	(2D = Zanshin counter, ground-bounce attack version; jumps biased down-back per demo)
+*/
+
+int i;
+
+define A = XB360_X;
+define B = XB360_Y;
+define C = XB360_B;
+define D = XB360_A;
+define u  = XB360_UP;
+define dn = XB360_DOWN;
+define l  = XB360_LEFT;
+define r  = XB360_RIGHT;
+
+main
+{
+	if(get_val(XB360_LS)) { i = 1; }
+	if(get_val(XB360_RS)) { i = 0; }
+	if(i==1) { combo_run(move1); }
+	if(i==0) { combo_stop(move1); }
+}
+
+combo move1
+{
+	// walk in
+	set(r);
+	wait(1000);
+
+	// 2B
+	set(dn);
+	set(B);
+	wait(60);
+	wait(140);
+
+	// 214A
+	set(dn);
+	wait(60);
+	set(dn);
+	set(l);
+	wait(60);
+	set(l);
+	set(A);
+	wait(60);
+	wait(300);
+
+	// 623A (Kishuu)
+	set(r);
+	wait(60);
+	set(dn);
+	wait(60);
+	set(dn);
+	set(r);
+	wait(60);
+	set(r);
+	set(A);
+	wait(60);
+	wait(170);
+
+	// A (Enma - Kishuu follow-up)
+	set(A);
+	wait(60);
+	wait(300);
+
+	// j.3
+	set(u);
+	set(r);
+	wait(60);
+	wait(350);
+
+	// j.2C
+	set(dn);
+	set(C);
+	wait(60);
+	set(dn);
+	wait(500);
+
+	// 2C (grounded)
+	set(dn);
+	set(C);
+	wait(60);
+	set(dn);
+	wait(300);
+
+	// (2) j.1  double jump
+	set(dn);
+	wait(30);
+	set(u);
+	set(r);
+	wait(60);
+	wait(150);
+
+	// j.2A
+	set(dn);
+	set(A);
+	wait(60);
+	wait(600);
+
+	// j.66 air dash (double-tap forward in air)
+	set(r);
+	wait(15);
+	wait(15);
+	set(r);
+	wait(60);
+	wait(60);
+
+	// j.2A
+	set(dn);
+	set(A);
+	wait(60);
+	wait(600);
+
+	// j.C
+	set(C);
+	wait(60);
+	wait(200);
+
+	i = 0;
+}
+
+function set(button)
+{
+	set_val(button, 100);
+}
