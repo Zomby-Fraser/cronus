@@ -1,0 +1,107 @@
+// REMOVE SLASHES ON LINE 2 AND 3 FOR TITAN TWO COMPATIBILITY!
+//#include <titanone.gph>
+//#pragma METAINFO("BBCS Hakumen M4 C2", 1, 0, "XxFrAsZeRxX")
+
+// Created by XxFrAsZeRxX
+
+//Instructions
+/*
+	Activate with LS from the starting position. Stop with RS if need be.
+	Full combo: 2D > 66 > 5B > j.1 > j.A > j.B > dj > j.2A > j.C
+
+	IMPORTANT - SIDE SWITCH:
+	The opening 2D counter-attack ground-bounces / crosses the enemy to Hakumen's
+	OTHER side. After that first move Hakumen is facing LEFT, so every direction
+	from the dash onward is mirrored: "forward" = l, jumps = u+l, etc.
+	That's why all the directional inputs below use l, not r.
+*/
+
+int i;
+
+define A = XB360_X;
+define B = XB360_Y;
+define C = XB360_B;
+define D = XB360_A;
+define u  = XB360_UP;
+define dn = XB360_DOWN;
+define l  = XB360_LEFT;
+define r  = XB360_RIGHT;
+
+main
+{
+	if(get_val(XB360_LS)) { i = 1; }
+	if(get_val(XB360_RS)) { i = 0; }
+	if(i==1) { combo_run(move1); }
+	if(i==0) { combo_stop(move1); }
+}
+
+combo move1
+{
+	// reset spacing (enemy is jumping) + long settle so 2D lands consistently
+	set(XB360_BACK);
+	wait(3200);
+
+	// 2D  (Zanshin counter -> attack version; ground bounce, crosses enemy to the LEFT)
+	set(dn);
+	set(D);
+	wait(60);
+	wait(900);       // counter/attack resolves, ground-bounces + side-switches
+
+	// --- from here Hakumen faces LEFT: "forward" = l ---
+
+	// 66 dash (double-tap LEFT; tight ~15ms gap between taps)
+	set(l);
+	wait(15);
+	wait(15);
+	set(l);
+	wait(60);
+	wait(180);       // dash closes distance
+
+	// 5B  (jump-cancellable)
+	set(B);
+	wait(60);
+	wait(80);        // 5B connects before jump-cancel
+
+	// high jump-cancel, biased down-back (1~9 style) for airtime
+	set(dn);
+	set(l);
+	wait(30);
+	set(u);
+	set(l);
+	wait(60);
+	wait(250);       // clear prejump + gain height
+
+	// j.A
+	set(A);
+	wait(60);
+	wait(300);
+
+	// j.B
+	set(B);
+	wait(60);
+	wait(150);
+
+	// double jump (plain up-forward/left; refreshes height)
+	set(u);
+	set(l);
+	wait(60);
+	wait(180);
+
+	// j.2A  (down + A in air, self-float on hit)
+	set(dn);
+	set(A);
+	wait(60);
+	wait(600);       // float carries into range before j.C
+
+	// j.C
+	set(C);
+	wait(60);
+	wait(200);
+
+	i = 0;
+}
+
+function set(button)
+{
+	set_val(button, 100);
+}
