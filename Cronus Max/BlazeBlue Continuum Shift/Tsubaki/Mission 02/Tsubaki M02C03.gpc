@@ -29,25 +29,25 @@ combo move1
 	set(r);
 	wait(1000);
 
-	// 632146 motion
-	set(r);          // 6 forward
+	// first 214
+	set(dn);
 	wait(60);
 	set(dn);
-	set(r);          // 3 down-forward
+	set(l);
 	wait(60);
-	set(dn);         // 2 down
-	wait(60);
-	set(dn);
-	set(l);          // 1 down-back
-	wait(60);
-	set(l);          // 4 back
-	wait(60);
-	set(r);          // 6 forward
-	set(C);          // + C to fire
+	set(l);
 	wait(60);
 
-	// astral freeze + cinematic startup -> let it fully trigger before reset
-	wait(400);
+	// second 214 + D (Macto Maledictis)
+	set(dn);
+	wait(60);
+	set(dn);
+	set(l);
+	wait(60);
+	set(l);
+	set(D);
+	wait(60);
+	wait(300);
 
 	i = 0;
 }
