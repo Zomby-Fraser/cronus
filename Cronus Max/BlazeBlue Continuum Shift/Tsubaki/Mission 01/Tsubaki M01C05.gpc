@@ -25,6 +25,10 @@ main
 
 combo move1
 {
+	set(XB360_BACK);
+	
+	wait(2000);
+	
 	// walk in
 	set(r);
 	wait(1000);
