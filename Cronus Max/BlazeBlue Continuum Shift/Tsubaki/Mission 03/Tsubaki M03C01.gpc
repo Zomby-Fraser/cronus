@@ -1,8 +1,10 @@
 // REMOVE SLASHES ON LINE 2 AND 3 FOR TITAN TWO COMPATIBILITY!
-//#include <titanone.gph>
-//#pragma METAINFO("BBCS Tsubaki M3 C1", 1, 0, "XxFrAsZeRxX")
+#include <titanone.gph>
+#pragma METAINFO("BBCS Tsubaki M3 C1", 1, 0, "XxFrAsZeRxX")
 
 // Created by XxFrAsZeRxX
+
+// Move all the way to the right, then activate.
 
 int i;
 
@@ -44,14 +46,13 @@ combo move1
 	set(B);
 	wait(60);
 	set(dn);
-	wait(220);
+	wait(300);
 
 	// 2B>B  (hold down, tap B again)
 	set(dn);
 	set(B);
 	wait(60);
-	set(dn);
-	wait(200);
+	wait(350);
 
 	// 5C  (release down -> neutral; follow-up window 16-26F)
 	set(C);
@@ -61,7 +62,7 @@ combo move1
 	// 5C>C  (Sp cancel available)
 	set(C);
 	wait(60);
-	wait(220);
+	wait(300);
 
 	// 236 + A  (special-cancel out of 5C>C)
 	set(dn);
@@ -72,7 +73,7 @@ combo move1
 	set(r);
 	set(A);
 	wait(60);
-	wait(150);
+	wait(300);
 
 	// 214 + A  (special -> special)
 	set(dn);
@@ -83,7 +84,7 @@ combo move1
 	set(l);
 	set(A);
 	wait(60);
-	wait(150);
+	wait(450);
 
 	// 22 + A  (delayable charge; down, neutral, down, tap+release)
 	set(dn);
@@ -92,7 +93,7 @@ combo move1
 	set(dn);
 	wait(60);
 	set(A);
-	wait(120);
+	wait(600);
 	wait(300);
 
 	i = 0;
