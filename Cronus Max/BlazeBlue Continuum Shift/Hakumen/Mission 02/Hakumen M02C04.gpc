@@ -1,6 +1,6 @@
 // REMOVE SLASHES ON LINE 2 AND 3 FOR TITAN TWO COMPATIBILITY!
-//#include <titanone.gph>
-//#pragma METAINFO("BBCS Hakumen M2 C4", 1, 0, "XxFrAsZeRxX")
+#include <titanone.gph>
+#pragma METAINFO("BBCS Hakumen M1 C1", 1, 0, "XxFrAsZeRxX")
 
 // Created by XxFrAsZeRxX
 
@@ -25,9 +25,6 @@ main
 
 combo move1
 {
-	// walk in
-	set(r);
-	wait(1000);
 
 	// [2] charge down (~700ms = ~42F, generous margin)
 	set(dn);
