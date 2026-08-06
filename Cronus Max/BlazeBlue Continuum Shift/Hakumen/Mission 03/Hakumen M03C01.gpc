@@ -25,31 +25,18 @@ main
 
 combo move1
 {
-	// 66 dash (double-tap forward; release between taps so game reads two presses)
+	// walk in
 	set(r);
-	wait(60);
-	wait(60);
-	set(r);
-	wait(60);       // dash sustains, closing distance
+	wait(1000);
+	wait(100);
 
-	// air 214 + C  (Tsubaki - grounds on hit)
-	set(dn);
-	wait(60);
-	set(dn);
-	set(l);
-	wait(60);
-	set(l);
+	// B + C  (simultaneous press, starter)
+	set(B);
 	set(C);
 	wait(60);
-	wait(610);
+	wait(750);       // let the starter connect before the special
 
-	// 2B  (down + B, low; cancels to special)
-	set(dn);
-	set(B);
-	wait(60);
-	wait(200);       // 2B connects, releases dn -> special-cancel into Gurren
-
-	// 214 + A  (Gurren - wall bounce on air hit)
+	// 214 + A  (Gurren)
 	set(dn);
 	wait(60);
 	set(dn);
@@ -58,32 +45,13 @@ combo move1
 	set(l);
 	set(A);
 	wait(60);
-	wait(900);      // wall-bounce travel before 6C (from M2C1 calibration)
-	
+	wait(1100);       // Gurren connects / wall-bounce before 6C
 
-	// 6C  (forward + C; cancels to supers only)
+	// 6C  (forward + C)
 	set(r);
 	set(C);
-	wait(100);
-	wait(240);       // 6C connects, then super-cancel into Shippu
-
-	// 632146 + C  (Shippu super)
-	set(r);          // 6
 	wait(60);
-	set(dn);
-	set(r);          // 3
-	wait(60);
-	set(dn);         // 2
-	wait(60);
-	set(dn);
-	set(l);          // 1
-	wait(60);
-	set(l);          // 4
-	wait(60);
-	set(r);          // 6
-	set(C);          // fire
-	wait(60);
-	wait(400);       // super freeze + cinematic
+	wait(200);
 
 	i = 0;
 }
