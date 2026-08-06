@@ -25,10 +25,6 @@ main
 
 combo move1
 {
-	// walk in
-	set(r);
-	wait(1000);
-
 	// 236 + A  (A Sanctus Aequum)
 	set(dn);
 	wait(60);
