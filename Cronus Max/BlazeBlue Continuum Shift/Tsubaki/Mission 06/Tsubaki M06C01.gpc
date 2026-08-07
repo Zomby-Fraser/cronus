@@ -1,0 +1,171 @@
+// REMOVE SLASHES ON LINE 2 AND 3 FOR TITAN TWO COMPATIBILITY!
+//#include <titanone.gph>
+//#pragma METAINFO("BBCS Tsubaki M6 C1", 1, 0, "XxFrAsZeRxX")
+
+// Created by XxFrAsZeRxX
+
+int i;
+
+define A = XB360_X;
+define B = XB360_Y;
+define C = XB360_B;
+define D = XB360_A;
+define u  = XB360_UP;
+define dn = XB360_DOWN;
+define l  = XB360_LEFT;
+define r  = XB360_RIGHT;
+
+main
+{
+	if(get_val(XB360_LS)) { i = 1; }
+	if(get_val(XB360_RS)) { i = 0; }
+	if(i==1) { combo_run(move1); }
+	if(i==0) { combo_stop(move1); }
+}
+
+combo move1
+{
+	// walk in
+	set(r);
+	wait(1500);
+	wait(1000);
+
+	// 22D
+	set(dn);
+	wait(30);
+	wait(30);
+	set(dn);
+	set(D);
+	wait(1800);
+	
+	// 6C
+	set(r);
+	set(C);
+	wait(60);
+	wait(225);
+	
+	// 5C
+	set(C);
+	wait(60);
+	wait(700);
+	
+	// j.29
+	set(dn);
+	wait(30);
+	wait(30);
+	set(u);
+	set(r);
+	wait(60);
+	wait(60);
+	
+	// j.5C
+	set(C);
+	wait(60);
+	wait(200);
+	
+	// j.9
+	set(u);
+	set(r);
+	wait(60);
+	wait(100);
+	
+	// j.5C
+	set(C);
+	wait(60);
+	wait(100);
+	
+	// j.236D
+	set(dn);
+	wait(60);
+	set(r);
+	set(dn);
+	wait(60);
+	set(r);
+	set(D);
+	wait(60);
+	wait(1200);
+	
+	// j.214D
+	set(dn);
+	wait(60);
+	set(l);
+	set(dn);
+	wait(60);
+	set(l);
+	set(D);
+	wait(60);
+	wait(1150);
+	
+	// Extra dash cancel
+	set(r);
+	wait(30);
+	wait(30);
+	set(r);
+	wait(60);
+	
+	// 6C
+	set(dn);
+	set(C);
+	wait(60);
+	wait(200);
+	
+	// 5C
+	set(C);
+	wait(60);
+	wait(600);
+	
+	// j.28
+	set(dn);
+	wait(30);
+	wait(30);
+	set(u);
+	wait(60);
+	
+	// j.5C
+	set(C);
+	wait(60);
+	wait(200);
+	
+	// j.8
+	set(u);
+	wait(60);
+	wait(125);
+	
+	// j.5C
+	set(C);
+	wait(60);
+	wait(150);
+	
+	// j.5C (x2)
+	set(C);
+	wait(60);
+	wait(400);
+	
+	// j.236A
+	set(dn);
+	wait(60);
+	set(dn);
+	set(r);
+	wait(60);
+	set(r);
+	set(A);
+	wait(60);
+	wait(300);
+	
+	// j.214C
+	set(dn);
+	wait(60);
+	set(dn);
+	set(l);
+	wait(60);
+	set(l);
+	set(C);
+	wait(60);
+	
+	i = 0;
+}
+
+function set(button)
+{
+	set_val(button, 100);
+}
