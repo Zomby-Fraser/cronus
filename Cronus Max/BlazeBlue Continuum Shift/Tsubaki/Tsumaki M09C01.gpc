@@ -1,0 +1,182 @@
+// REMOVE SLASHES ON LINE 2 AND 3 FOR TITAN TWO COMPATIBILITY!
+#include <titanone.gph>
+#pragma METAINFO("BBCS Tsubaki M9 C1", 1, 0, "XxFrAsZeRxX")
+
+// Created by XxFrAsZeRxX
+
+// Activate as Bang is landing on the ground.
+
+int i;
+
+define A = XB360_X;
+define B = XB360_Y;
+define C = XB360_B;
+define D = XB360_A;
+define u  = XB360_UP;
+define dn = XB360_DOWN;
+define l  = XB360_LEFT;
+define r  = XB360_RIGHT;
+
+main
+{
+	if(get_val(XB360_LS)) { i = 1; }
+	if(get_val(XB360_RS)) { i = 0; }
+	if(i==1) { combo_run(move1); }
+	if(i==0) { combo_stop(move1); }
+}
+
+combo move1
+{	
+	// Walk in
+	set(r);
+	wait(1100);
+	wait(250);
+	
+	// BC
+	set(B);
+	set(C);
+	wait(60);
+	wait(300);
+	
+	// 214214D
+	set(dn);
+	wait(60);
+	set(dn);
+	set(l);
+	wait(60);
+	set(l);
+	wait(60);
+	set(dn);
+	wait(60);
+	set(dn);
+	set(l);
+	wait(60);
+	set(l);
+	set(D);
+	wait(60);
+	wait(2300);
+	
+	// 22D (delayable)
+	set(dn);
+	wait(60);
+	wait(60);
+	set(dn);
+	set(D);
+	wait(60);
+	wait(750);
+	
+	// 214D
+	set(dn);
+	wait(60);
+	set(dn);
+	set(l);
+	wait(60);
+	set(l);
+	set(D);
+	wait(60);
+	wait(1100);
+	
+	// 623D
+	set(r);
+	wait(60);
+	set(dn);
+	wait(60);
+	set(r);
+	set(dn);
+	set(D);
+	wait(60);
+	wait(100);
+	
+	// j.214D
+	set(dn);
+	wait(60);
+	set(dn);
+	set(l);
+	wait(60);
+	set(l);
+	set(D);
+	wait(60);
+	wait(1000);
+
+	// 6C
+	set(r);
+	set(C);
+	wait(60);
+	wait(250); // Max: 700, Min: 250
+	
+	// 5C
+	set(C);
+	wait(60);
+	wait(700); // Cancels the 6C up to 350. 400-  no jump
+	
+	// j.8
+	set(dn);
+	wait(60);
+	wait(60);
+	set(u);
+	set(r);
+	wait(60);
+	wait(0);
+	
+	// j.5C
+	set(C);
+	wait(60);
+	wait(300);
+	
+	// j.8
+	set(u);
+	set(r);
+	wait(60);
+	wait(0);
+	
+	// j.5C 
+	set(C);
+	wait(60);
+	wait(200);
+	
+	// j.5C
+	set(C);
+	wait(60);
+	wait(500);
+	
+	// j.214D
+	set(dn);
+	wait(60);
+	set(dn);
+	set(l);
+	wait(60);
+	set(l);
+	set(D);
+	wait(60);
+	wait(1100);
+	
+	// 2C
+	set(C);
+	set(dn);
+	wait(60);
+	wait(100);
+	
+	// 236236D
+	set(dn);
+	wait(60);
+	set(dn);
+	set(r);
+	wait(60);
+	set(r);
+	wait(60);
+	set(dn);
+	wait(60);
+	set(dn);
+	set(r);
+	wait(60);
+	set(r);
+	set(D);
+	wait(60);
+	
+	i = 0;
+}
+
+function set(button)
+{
+	set_val(button, 100);
+}
