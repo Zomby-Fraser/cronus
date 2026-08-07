@@ -2,9 +2,7 @@
 //#include <titanone.gph>
 //#pragma METAINFO("BBCS Tsubaki M5 C1", 1, 0, "XxFrAsZeRxX")
 
-// Created by XxFrAsZeRxX
-
-// Activate when Bang is at the top of his jump. 
+// Created by XxFrAsZeRxX 
 
 int i;
 
