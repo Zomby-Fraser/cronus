@@ -1,0 +1,117 @@
+// REMOVE SLASHES ON LINE 2 AND 3 FOR TITAN TWO COMPATIBILITY!
+//#include <titanone.gph>
+//#pragma METAINFO("BBCS Tsubaki M5 C1", 1, 0, "XxFrAsZeRxX")
+
+// Created by XxFrAsZeRxX
+
+// Activate when Bang is at the top of his jump. 
+
+int i;
+
+define A = XB360_X;
+define B = XB360_Y;
+define C = XB360_B;
+define D = XB360_A;
+define u  = XB360_UP;
+define dn = XB360_DOWN;
+define l  = XB360_LEFT;
+define r  = XB360_RIGHT;
+
+main
+{
+	if(get_val(XB360_LS)) { i = 1; }
+	if(get_val(XB360_RS)) { i = 0; }
+	if(i==1) { combo_run(move1); }
+	if(i==0) { combo_stop(move1); }
+}
+
+combo move1
+{
+	// walk in
+	set(r);
+	wait(1500);
+	wait(100);
+
+	// BC
+	set(B);
+	set(C);
+	wait(450);
+	
+	// 22D
+	set(dn);
+	wait(60);
+	wait(60);
+	set(dn);
+	wait(60);
+	set(D);
+	wait(500);
+	wait(800);
+	
+	// 6C
+	set(r);
+	set(C);
+	wait(60);
+	wait(250);
+	
+	// C
+	set(C);
+	wait(60);
+	wait(800);
+	
+	// j.3
+	set(dn);
+	wait(30);
+	wait(30);
+	set(u);
+	set(r);
+	wait(60);
+	
+	// j.C
+	set(C);
+	wait(60);
+	wait(200);
+	
+	// j.3
+	set(u);
+	set(r);
+	wait(60);
+	wait(150);
+	
+	// j.C
+	set(C);
+	wait(60);
+	wait(100);
+	
+	// j.C
+	set(C);
+	wait(60);
+	wait(350);
+	
+	// 236A
+	set(dn);
+	wait(60);
+	set(dn);
+	set(r);
+	wait(60);
+	set(r);
+	set(A);
+	wait(60);
+	wait(200);
+	
+	// 214C
+	set(dn);
+	wait(60);
+	set(dn);
+	set(l);
+	wait(60);
+	set(l);
+	set(C);
+	wait(60);
+	
+	i = 0;
+}
+
+function set(button)
+{
+	set_val(button, 100);
+}
