@@ -1,0 +1,44 @@
+//#include <titanone.gph>
+//#pragma METAINFO("Akihiko", 1, 0, "sTuNtAsTiC b0sS")
+
+// Change the mapping: click the back button on the bottom 5 to clear these so no button is assigned
+
+// Start the trial and activate with LS. Stop with RS.
+
+int i; //declares variable
+main
+{
+	if(get_val(XB360_LS))//When LS is pressed, i=1
+	{
+		i=1;
+	}
+	if(get_val(XB360_RS)) //When Xbox button is pressed, i=0;
+	{
+		i=0;
+	}
+	if(i==1) //For *OPTION 1*
+	{	
+		combo_run(Host);
+	}
+	if(i==0) //Stops all macros
+	{
+		combo_stop(Host);
+	}
+}
+
+combo Host //Macro for Host
+{
+	set_val(XB360_RIGHT, 100);
+	wait(1000);
+	set_val(XB360_RIGHT, 0);
+	wait(100);
+	set_val(PS4_CROSS, 100);
+	wait(10);
+	set_val(PS4_CIRCLE, 100);
+	set_val(PS4_CROSS, 100);
+	wait(80);
+	set_val(PS4_CIRCLE, 0);
+	set_val(PS4_CROSS, 0);
+	wait(50);
+	i = 0;
+}
