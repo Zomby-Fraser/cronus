@@ -1,5 +1,5 @@
-#include <titanone.gph>
-#pragma METAINFO("BBCS Tsubaki M1 C1", 1, 0, "XxFrAsZeRxX")
+//#include <titanone.gph>
+//#pragma METAINFO("SF4 Ryu Normal Trial 4-4", 1, 0, "XxFrAsZeRxX")
 main {
     if(get_val(XB1_RS)) {
         combo_run(Turbo_1);
