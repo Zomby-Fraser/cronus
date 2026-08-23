@@ -1,6 +1,6 @@
 // REMOVE SLASHES ON LINE 2 AND 3 FOR TITAN TWO COMPATIBILITY!
-#include <titanone.gph>
-#pragma METAINFO("SF4 Chun-Li Hard Trial 1", 1, 0, "XxFrAsZeRxX")
+//#include <titanone.gph>
+//#pragma METAINFO("SF4 Chun-Li Hard Trial 1", 1, 0, "XxFrAsZeRxX")
 int i;
 
 define lk = XB360_A;
