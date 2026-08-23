@@ -1,6 +1,6 @@
 // REMOVE SLASHES ON LINE 2 AND 3 FOR TITAN TWO COMPATIBILITY!
-#include <titanone.gph>
-#pragma METAINFO("SF4 Fei Long Hard Trial 1", 1, 0, "XxFrAsZeRxX")
+//#include <titanone.gph>
+//#pragma METAINFO("SF4 Fei Long Hard Trial 1", 1, 0, "XxFrAsZeRxX")
 
 //Created and/or amended by Dr Marty. 
 //I need to thank JayD101 for providing some of the source material.
