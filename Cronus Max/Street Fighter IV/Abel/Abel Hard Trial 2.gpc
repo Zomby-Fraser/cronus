@@ -39,7 +39,7 @@ combo trial {
     wait(20);
     set_val(XB360_DOWN, 100);
     set_val(XB360_RIGHT, 100);
-    wait(20)
+    wait(20);
     set_val(XB360_DOWN, 0);
     set_val(XB360_RIGHT, 100);
     set_val(XB360_Y, 100);
