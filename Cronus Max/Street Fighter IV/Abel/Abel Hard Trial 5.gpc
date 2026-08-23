@@ -7,6 +7,8 @@
 //Also thanks to XxFrAsZeRxX for a crash course in CronusMax scripting.
 //Lastly, thanks goes to James Nguyen (siky) for some details on game mechanics 
 
+// Push Dan all the way to the right then back off slightly.
+
 main {  if(get_val(XB360_LS)) combo_run(trial); 
         if(get_val(XB360_RS)) combo_stop(trial); 
 }
@@ -35,7 +37,7 @@ combo trial {
     wait(20);
     set_val(XB360_DOWN, 100);
     set_val(XB360_RIGHT, 100);
-    wait(20)
+    wait(20);
     set_val(XB360_DOWN, 0);
     set_val(XB360_RIGHT, 100);
     set_val(XB360_Y, 100);
