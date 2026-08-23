@@ -1,6 +1,6 @@
 //Push the characters all the way to the right, and then tap LEFT 5 times. Activate using LS.
-#include <titanone.gph>
-#pragma METAINFO("BBCS Tsubaki M1 C1", 1, 0, "XxFrAsZeRxX")
+//#include <titanone.gph>
+//#pragma METAINFO("SF4 Ryu Hard Trial 2", 1, 0, "XxFrAsZeRxX")
 int i;
 
 define lk = XB360_A;
