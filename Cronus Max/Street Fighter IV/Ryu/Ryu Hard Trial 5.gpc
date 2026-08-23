@@ -1,6 +1,6 @@
 //Push the characters all the way to the right. Take a few steps backwars and activate using LS.
-#include <titanone.gph>
-#pragma METAINFO("BBCS Tsubaki M1 C1", 1, 0, "XxFrAsZeRxX")
+//#include <titanone.gph>
+//#pragma METAINFO("SF4 Ryu Hard Trial 5", 1, 0, "XxFrAsZeRxX")
 int i;
 
 define lk = XB360_A;
