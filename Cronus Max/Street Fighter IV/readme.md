@@ -1,6 +1,6 @@
 # Street Fighter 4 Challenge Mode Trials Automation Script
 ## Overview
-This script automates the execution of Challenge Mode trial combos in Street Fighter 4 for Dan's training dummy setup. It is designed to handle the timing and input sequences required to complete trials automatically. This collection covers all of the hard trials and most of the normal trials, making it ideal for clearing challenge combos without manual execution.
+This script automates the execution of Challenge Mode trial combos in Street Fighter 4. It is designed to handle the timing and input sequences required to complete trials automatically. This collection covers all of the hard trials and most of the normal trials, making it ideal for clearing challenge combos without manual execution.
 
 ## Setup Instructions
 ### Positioning
