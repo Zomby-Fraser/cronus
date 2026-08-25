@@ -5,7 +5,7 @@ This script automates the execution of Challenge Mode trial combos in Street Fig
 ## Setup Instructions
 ### Positioning
 1. For most scripts, position your character as close to Dan as possible, usually by cornering him.
-2. If a script's notes indicate it begins with a jump, leave some space between your character and Dan so the jump-in has room to connect.
+2. If a trial indicate it begins with a jump, leave some space between your character and Dan so the jump-in has room to connect.
 3. Some scripts include specific notes on when to start them and in what position. Always check for these notes before activating; if there are no notes, use the default close-range corner positioning described above.
 
 ### Starting the Script
