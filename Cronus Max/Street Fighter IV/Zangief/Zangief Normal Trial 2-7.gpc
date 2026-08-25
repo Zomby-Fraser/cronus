@@ -18,16 +18,16 @@ combo trial {
 	//Jump in
     set_val(XB360_UP, 100);
     set_val(XB360_RIGHT, 100);
-    wait(20)
+    wait(20);
     set_val(XB360_UP, 0);
     set_val(XB360_RIGHT, 0);
-    wait(450)
+    wait(450);
 	//First 360
     set_val(XB360_RIGHT, 100);
     wait(20);
     set_val(XB360_DOWN, 100);
     set_val(XB360_RIGHT, 100);
-    wait(20)
+    wait(20);
     set_val(XB360_DOWN, 100);
     wait(20);
     set_val(XB360_LEFT, 100);
@@ -48,7 +48,7 @@ combo trial {
     wait(20);
     set_val(XB360_DOWN, 100);
     set_val(XB360_RIGHT, 100);
-    wait(20)
+    wait(20);
     set_val(XB360_DOWN, 100);
     wait(20);
     set_val(XB360_LEFT, 100);
